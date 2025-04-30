@@ -7,7 +7,7 @@ const Soups = ({ addToCard, favorites, toggleFavorite }) => {
 
   const handleFavoriteClick = (item) => {
     toggleFavorite(item);
-    // ❌ navigate('/favorite') qilmaymiz, faqat like/unlike qiladi
+   
   };
 
   return (
@@ -18,7 +18,7 @@ const Soups = ({ addToCard, favorites, toggleFavorite }) => {
           {SoupsArray.map((card, index) => (
             <div key={index} className="relative space-y-4 p-4 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 bg-white">
               
-              {/* Like tugmasi */}
+             
               <button
                 className="absolute top-4 right-4 text-yellow text-2xl"
                 onClick={() => handleFavoriteClick(card)}

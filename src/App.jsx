@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 import CardPage from './pages/CardPage';
 import FavoritesPage from './pages/FavoritesPage';
 import Drinks from './pages/Drinks';
-import 'react-toastify/dist/ReactToastify.css'; // Toastify CSS
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const [card, setCart] = useState([]);

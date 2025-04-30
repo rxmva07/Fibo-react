@@ -19,7 +19,6 @@ const Favorite = ({ favorites, addToCard, toggleFavorite }) => {
               />
               <h2 className="text-lg font-semibold mb-1">{pizza.type}</h2>
 
-              {/* Agar description bo‘lsa — ko‘rsatamiz, bo‘lmasa default xabar */}
               <p className="text-sm text-gray-500 mb-2">
                 {pizza.description ? pizza.description : 'Tavsif mavjud emas.'}
               </p>
@@ -34,7 +33,7 @@ const Favorite = ({ favorites, addToCard, toggleFavorite }) => {
                 </button>
               </div>
 
-              {/* LIKE - DISLIKE tugmasi */}
+
               <button
                 onClick={() => toggleFavorite(pizza)}
                 className="absolute top-3 right-3 text-red-500"

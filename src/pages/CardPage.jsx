@@ -40,7 +40,7 @@ const CartPage = ({ card }) => {
               const itemTotal = (cleanPrice * item.quantity).toFixed(2);
               return (
                 <div key={index} className="flex flex-col sm:flex-row items-center justify-between pb-4 border-b gap-4">
-                  {/* Rasm va malumot */}
+
                   <div className="flex items-center gap-4 w-full sm:w-auto">
                     <img src={item.img} alt={item.title} className="w-20 h-20 rounded-xl object-cover" />
                     <div className="space-y-1">
@@ -50,14 +50,14 @@ const CartPage = ({ card }) => {
                     </div>
                   </div>
 
-                  {/* Miqdorni o'zgartirish */}
+
                   <div className="flex items-center space-x-2">
                     <button className="px-2 py-1 bg-gray-200 rounded" onClick={() => handleQuantityChange(index, -1)}>–</button>
                     <span className="px-3 text-lg">{item.quantity}</span>
                     <button className="px-2 py-1 bg-gray-200 rounded" onClick={() => handleQuantityChange(index, 1)}>+</button>
                   </div>
 
-                  {/* Umumiy narx va o'chirish */}
+
                   <div className="flex items-center gap-3">
                     <div className="text-yellow-500 font-semibold text-lg">{itemTotal} ₽</div>
                     <button
@@ -73,7 +73,7 @@ const CartPage = ({ card }) => {
           </div>
         )}
 
-        {/* Umumiy narx va Promokod */}
+
         <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-end gap-4">
           <input
             type="text"

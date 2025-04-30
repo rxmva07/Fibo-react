@@ -19,19 +19,15 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-10 bg-white shadow-md">
-      {/* Top Bar */}
       <div className="container py-5 flex justify-between items-center">
-        {/* Logo */}
         <img src={logo} alt="fibo logo" />
-
-        {/* Burger for mobile */}
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
-        {/* Right content (only on md and up) */}
+
         <div className="hidden md:flex items-center space-x-14">
           <div className="flex flex-col space-y-1">
             <p className="font-semibold text-lg">
@@ -62,7 +58,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+
       {menuOpen && (
         <div className="md:hidden font-bold bg-yellow py-4 transition-all duration-300 rounded-b-2xl">
           <nav className="flex flex-col items-center gap-4 px-4">
@@ -83,7 +79,7 @@ const Header = () => {
         </div>
       )}
 
-      {/* Full Menu for md and up */}
+
       <div className="hidden md:block">
         <div className="container font-semibold mt-6 md:mt-0">
           <div className="flex justify-between items-center w-full">

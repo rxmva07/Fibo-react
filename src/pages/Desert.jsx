@@ -8,7 +8,7 @@ const Dessert = ({ addToCard, favorites, toggleFavorite }) => {
 
   const handleFavoriteClick = (dessert) => {
     toggleFavorite(dessert);
-    // ❌ navigate yo'q, faqat favoritni toggle qilamiz
+    
   };
 
   return (
@@ -20,7 +20,7 @@ const Dessert = ({ addToCard, favorites, toggleFavorite }) => {
           {DessertsArray.map((dessert, index) => (
             <div key={index} className='relative space-y-4 p-4 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 bg-white'>
               
-              {/* Like tugmasi */}
+
               <button 
                 onClick={() => handleFavoriteClick(dessert)}
                 className="absolute top-3 right-3 text-red-500"

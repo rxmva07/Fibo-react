@@ -83,7 +83,7 @@ const Home = () => {
         <img 
           src={item.image} 
           alt={item.title} 
-          className="w-16 sm:w-20 md:w-24 lg:w-32 h-auto object-contain" // Responsiv rasm o'lchami
+          className="w-16 sm:w-20 md:w-24 lg:w-32 h-auto object-contain" 
         />
         <div className='ml-4'>
           <h5 className='font-bold text-sm sm:text-base md:text-lg'>{item.title}</h5>

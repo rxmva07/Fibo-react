@@ -8,7 +8,7 @@ const Pizza = ({ addToCard, favorites, toggleFavorite }) => {
 
   const handleFavoriteClick = (pizza) => {
     toggleFavorite(pizza);
-    // ❌ Bu yerda navigate('/favorite') QILMAYMIZ
+
   };
 
   return (
