@@ -4,17 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { PizzaArray } from "../data/PizzaArray"; 
 
 const Pizza = ({ addToCard, favorites, toggleFavorite }) => {
-  const navigate = useNavigate(); 
-
-
   const isFavorite = (pizzaId) => favorites.some((fav) => fav.id === pizzaId);
 
-  
   const handleFavoriteClick = (pizza) => {
-    toggleFavorite(pizza); 
-    if (!isFavorite(pizza.id)) {
-     
-    }
+    toggleFavorite(pizza);
+    // ❌ Bu yerda navigate('/favorite') QILMAYMIZ
   };
 
   return (
@@ -34,7 +28,7 @@ const Pizza = ({ addToCard, favorites, toggleFavorite }) => {
               </button>
             </div>
             <button
-              onClick={() => handleFavoriteClick(pizza)} 
+              onClick={() => handleFavoriteClick(pizza)}
               className="absolute top-3 right-3 text-red-500"
             >
               <Heart fill={isFavorite(pizza.id) ? 'currentColor' : 'none'} />
