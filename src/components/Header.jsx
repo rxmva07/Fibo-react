@@ -11,10 +11,12 @@ const Header = () => {
 
   const toCard = () => {
     navigate('/card');
+    setMenuOpen(false); // menyuni yopish
   };
 
   const toFavorite = () => {
     navigate('/favorite');
+    setMenuOpen(false); // menyuni yopish
   };
 
   return (
@@ -26,7 +28,6 @@ const Header = () => {
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
-
 
         <div className="hidden md:flex items-center space-x-14">
           <div className="flex flex-col space-y-1">
@@ -58,11 +59,10 @@ const Header = () => {
         </div>
       </div>
 
-
       {menuOpen && (
         <div className="md:hidden font-bold bg-yellow py-4 transition-all duration-300 rounded-b-2xl">
           <nav className="flex flex-col items-center gap-4 px-4">
-            <Link to="/" onClick={() => setMenuOpen(false)} >Home</Link>
+            <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
             <Link to="/pizza" onClick={() => setMenuOpen(false)}>Pizza</Link>
             <Link to="/paste" onClick={() => setMenuOpen(false)}>Paste</Link>
             <Link to="/soups" onClick={() => setMenuOpen(false)}>Soups</Link>
@@ -78,7 +78,6 @@ const Header = () => {
           </div>
         </div>
       )}
-
 
       <div className="hidden md:block">
         <div className="container font-semibold mt-6 md:mt-0">
